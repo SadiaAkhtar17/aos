@@ -8,13 +8,18 @@ class AOSPositiveTestCases(unittest.TestCase):
     @staticmethod
     def test_create_new_user():
         methods.setUp()
+        methods.validate_homepage_texts_links()
+        methods.check_main_logo()
+        methods.contactus_form()
         methods.create_new_user()
-        methods.validated_new_user_created()
+        methods.validate_new_user_created()
         methods.log_out()
         methods.log_in()
-        methods.validated_user_login()
-        methods.log_out()
+        methods.validate_user_login()
+        methods.checkout_shoppingcart()
+        methods.validate_order_created()
+        methods.delete_order()
+        methods.delete_account()
+        methods.log_in()
+        methods.validate_user_account_deleted()
         methods.tearDown()
-
-
-
